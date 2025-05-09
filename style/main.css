@@ -1,0 +1,29 @@
+@import 'reset.css';
+
+:root {
+    --color-blue-dark: #1B3954;
+    --color-blue-light: #95DAFD;
+    --color-blue-ocean: #16ADE1;
+    --color-white: #ffffff;
+}
+
+html, body {
+    font-family: 'Secular One', sans-serif;
+    min-height: 100dvh;
+    min-width: 100dvw;
+    background-color: var(--color-blue-light);
+}
+
+.container {
+    display: flex;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media screen and (min-width: 400px) {
+    .container {
+        max-width: 400px;
+    }
+}
