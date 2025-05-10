@@ -1,4 +1,5 @@
 @import "main.css";
+@import "tooltip.css";
 
 header {
   display: flex;
@@ -45,6 +46,7 @@ form {
 
 .form-group {
   display: flex;
+  position: relative;
   flex-direction: column;
   row-gap: 2px;
   margin-bottom: 25px;
@@ -63,12 +65,25 @@ form {
 .form-group input[type="password"] {
   padding-top: 10px;
   padding-bottom: 10px;
-  border-radius: 5px;
+  border-radius: var(--border-radius-md);
   border: none;
   font-size: 15px;
   width: 100%;
   color: var(--color-blue-dark);
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  border: 2px solid var(--color-blue-dark);
+  /* box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); */
+}
+
+.hidden-password-icon,
+.user-icon {
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 67.5%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  width: var(--icon-size);
+  height: var(--icon-size);
 }
 
 .form-group input:focus {
@@ -88,12 +103,83 @@ form {
   align-items: center;
 }
 
-#remember {
+.form-group.remember #remember {
   margin: 0 3px 0 0;
+  border: 2px solid var(--color-blue-dark);
   background-color: var(--color-blue-ocean) !important;
 }
 
 .forget-password {
   color: var(--color-blue-dark);
   font-size: 15px;
+}
+
+.arc-login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-blue-dark);
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: var(--border-radius-md);
+  border: none;
+}
+
+.login-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-blue-dark);
+  color: var(--color-white);
+  font-family: "Secular One", sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+  border-radius: var(--border-radius-md);
+  border: none;
+  cursor: pointer;
+}
+
+.login-icon {
+  transition: all 0.2s ease;
+  width: 17px;
+  height: 17px;
+}
+
+.login-button:hover > .login-icon {
+  transform: translateX(3px);
+}
+
+.arc-information {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+  font-size: 15px;
+}
+
+.arc-information a.register-link {
+  color: var(--color-blue-ocean);
+  font-size: 15px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.arc-information a.information-link {
+  border-radius: 50%;
+  padding: 10px 15px;
+  background-color: var(--color-blue-dark);
+  color: var(--color-white);
+  font-size: 20px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
 }

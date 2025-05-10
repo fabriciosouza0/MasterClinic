@@ -2,9 +2,11 @@
 
 :root {
     --color-blue-dark: #1B3954;
-    --color-blue-light: #95DAFD;
+    --color-blue-light: #e4f6ff;
     --color-blue-ocean: #16ADE1;
     --color-white: #ffffff;
+    --border-radius-md: 10px;
+    --icon-size: 24px;
 }
 
 html, body {
