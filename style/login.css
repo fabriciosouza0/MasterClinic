@@ -1,5 +1,4 @@
 @import "main.css";
-@import "tooltip.css";
 
 header {
   display: flex;
@@ -74,12 +73,28 @@ form {
   /* box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); */
 }
 
-.hidden-password-icon,
+/* .hidden-password-icon,
 .user-icon {
   display: block;
   position: absolute;
   right: 0px;
   top: 67.5%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  width: var(--icon-size);
+  height: var(--icon-size);
+} */
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon .user-icon,
+.input-with-icon .password-icon {
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
   width: var(--icon-size);

@@ -2,9 +2,10 @@
 
 :root {
     --color-blue-dark: #1B3954;
-    --color-blue-light: #e4f6ff;
+    --color-blue-light: #f8fbfd;
     --color-blue-ocean: #16ADE1;
     --color-white: #ffffff;
+    --color-red-error: #b3002d;
     --border-radius-md: 10px;
     --icon-size: 24px;
 }
@@ -22,6 +23,28 @@ html, body {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.invalid-feedback {
+    color: var(--color-blue-dark);
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-none {
+    display: none;
+}
+
+.color-red-error {
+    color: var(--color-red-error);
+}
+
+.border-red-error {
+    border: 2px solid var(--color-red-error) !important;
 }
 
 @media screen and (min-width: 400px) {
