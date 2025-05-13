@@ -1,52 +1,77 @@
-function validateLoginForm(event) {
-  event.preventDefault();
-  let login = login_form.login;
-  let password = login_form.password;
+const loginFormInputElements = {
+  login: login_form.login,
+  password: login_form.password,
+};
 
-  let invalidLoginSpan = document.querySelector(".invalid-feedback.login");
-  let invalidPasswordSpan = document.querySelector(
+const showLoginFeedbackSpan = () => {
+  const loginFeedbackSpan = document.querySelector(".invalid-feedback.login");
+
+  loginFormInputElements.login.classList.add("border-red-error");
+  loginFeedbackSpan.classList.remove("d-none");
+  loginFeedbackSpan.classList.add("d-block");
+
+  loginFormInputElements.login.focus();
+};
+
+const hiddenLoginFeedbackSpan = () => {
+  const loginFeedbackSpan = document.querySelector(".invalid-feedback.login");
+
+  loginFormInputElements.login.classList.remove("border-red-error");
+  loginFeedbackSpan.classList.remove("d-block");
+  loginFeedbackSpan.classList.add("d-none");
+};
+
+const showPasswordFeedbackSpan = () => {
+  const passwordFeedbackSpan = document.querySelector(
     ".invalid-feedback.password"
   );
 
-  if (login.value === "") {
-    login.classList.add("border-red-error");
-    invalidLoginSpan.classList.remove("d-none");
-    invalidLoginSpan.classList.add("d-block");
+  loginFormInputElements.password.classList.add("border-red-error");
+  passwordFeedbackSpan.classList.remove("d-none");
+  passwordFeedbackSpan.classList.add("d-block");
 
-    login.focus();
+  loginFormInputElements.password.focus();
+};
+
+const hiddenPasswordFeedbackSpan = () => {
+  const passwordFeedbackSpan = document.querySelector(
+    ".invalid-feedback.password"
+  );
+
+  loginFormInputElements.password.classList.remove("border-red-error");
+  passwordFeedbackSpan.classList.remove("d-block");
+  passwordFeedbackSpan.classList.add("d-none");
+};
+
+function validateLoginForm(event) {
+  event.preventDefault();
+
+  if (login.value === "") {
+    showLoginFeedbackSpan();
     return false;
   } else {
-    login.classList.remove("border-red-error");
-    invalidLoginSpan.classList.remove("d-block");
-    invalidLoginSpan.classList.add("d-none");
+    hiddenLoginFeedbackSpan();
   }
 
   if (password.value === "") {
-    password.classList.add("border-red-error");
-    invalidPasswordSpan.classList.remove("d-none");
-    invalidPasswordSpan.classList.add("d-block");
-
-    password.focus();
+    showPasswordFeedbackSpan();
     return false;
   } else {
-    password.classList.remove("border-red-error");
-    invalidPasswordSpan.classList.remove("d-block");
-    invalidPasswordSpan.classList.add("d-none");
+    hiddenPasswordFeedbackSpan();
   }
 }
 
 function showPassword() {
-  let passwordIcon = document.querySelector(".password-icon");
-  let passwordInput = document.getElementById("password");
+  let passwordIcon = document.getElementById("password-icon");
 
-  if (password.type === "password") {
-    passwordInput.type = "text";
+  if (loginFormInputElements.password.type === "password") {
+    loginFormInputElements.password.type = "text";
     passwordIcon.attributes.getNamedItem("src").value =
       "assets/img/login/showing_password.png";
     return;
   }
-  
-  passwordInput.type = "password";
+
+  loginFormInputElements.password.type = "password";
   passwordIcon.attributes.getNamedItem("src").value =
     "assets/img/login/show_password.png";
 }
