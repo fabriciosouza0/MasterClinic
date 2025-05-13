@@ -1,54 +1,55 @@
-@import 'reset.css';
+@import "reset.css";
 
 :root {
-    --color-blue-dark: #1B3954;
-    --color-blue-light: #f8fbfd;
-    --color-blue-ocean: #16ADE1;
-    --color-white: #ffffff;
-    --color-red-error: #b3002d;
-    --border-radius-md: 10px;
-    --icon-size: 24px;
+  --color-blue-dark: #1b3954;
+  --color-blue-light: #f8fbfd;
+  --color-blue-ocean: #16ade1;
+  --color-white: #ffffff;
+  --color-red-error: #b3002d;
+  --border-radius-md: 10px;
+  --icon-size: 24px;
 }
 
-html, body {
-    font-family: 'Secular One', sans-serif;
-    min-height: 100dvh;
-    min-width: 100dvw;
-    background-color: var(--color-blue-light);
+html,
+body {
+  font-family: "Secular One", sans-serif;
+  min-height: 100dvh;
+  min-width: 100dvw;
+  background-color: var(--color-blue-light);
 }
 
 .container {
-    display: flex;
-    width: calc(100% - 30px);
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+  display: flex;
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .invalid-feedback {
-    color: var(--color-blue-dark);
-    font-size: 13px;
-    margin-top: 5px;
+  color: var(--color-blue-dark);
+  font-size: 13px;
+  margin-top: 5px;
 }
 
 .d-block {
-    display: block;
+  display: block;
 }
 
 .d-none {
-    display: none;
+  display: none;
 }
 
 .color-red-error {
-    color: var(--color-red-error);
+  color: var(--color-red-error);
 }
 
 .border-red-error {
-    border: 2px solid var(--color-red-error) !important;
+  border: 2px solid var(--color-red-error) !important;
 }
 
 @media screen and (min-width: 400px) {
-    .container {
-        max-width: 400px;
-    }
+  .container {
+    max-width: 400px;
+  }
 }

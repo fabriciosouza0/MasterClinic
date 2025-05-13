@@ -72,6 +72,4 @@ function showPassword() {
   }
 
   loginFormInputElements.password.type = "password";
-  passwordIcon.attributes.getNamedItem("src").value =
-    "assets/img/login/show_password.png";
 }
