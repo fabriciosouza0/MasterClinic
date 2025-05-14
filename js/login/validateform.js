@@ -62,14 +62,14 @@ function validateLoginForm(event) {
 }
 
 function showPassword() {
-  let passwordIcon = document.getElementById("password-icon");
+  let eyeLine = document.getElementById("eye-line");
 
   if (loginFormInputElements.password.type === "password") {
     loginFormInputElements.password.type = "text";
-    passwordIcon.attributes.getNamedItem("src").value =
-      "assets/img/login/showing_password.png";
+    eyeLine.setAttribute("d", "");
     return;
   }
 
   loginFormInputElements.password.type = "password";
+  eyeLine.setAttribute("d", "M5 2L21 18");
 }
