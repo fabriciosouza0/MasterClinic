@@ -61,15 +61,19 @@ function validateLoginForm(event) {
   }
 }
 
-function showPassword() {
-  let eyeLine = document.getElementById("eye-line");
+function togglePassword() {
+  let openEye = document.getElementById("open-eye");
+  let closedEye = document.getElementById("closed-eye");
 
   if (loginFormInputElements.password.type === "password") {
     loginFormInputElements.password.type = "text";
-    eyeLine.setAttribute("d", "");
+    closedEye.classList.add("d-none");
+    openEye.classList.remove("d-none");
+
     return;
   }
 
+  closedEye.classList.remove("d-none");
+  openEye.classList.add("d-none");
   loginFormInputElements.password.type = "password";
-  eyeLine.setAttribute("d", "M5 2L21 18");
 }
