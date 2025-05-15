@@ -62,18 +62,18 @@ function validateLoginForm(event) {
 }
 
 function togglePassword() {
-  let openEye = document.getElementById("open-eye");
-  let closedEye = document.getElementById("closed-eye");
+  let viewLight = document.getElementById("view_light");
+  let viewHideLight = document.getElementById("view_hide_light");
 
   if (loginFormInputElements.password.type === "password") {
     loginFormInputElements.password.type = "text";
-    closedEye.classList.add("d-none");
-    openEye.classList.remove("d-none");
+    viewHideLight.classList.add("d-none");
+    viewLight.classList.remove("d-none");
 
     return;
   }
 
-  closedEye.classList.remove("d-none");
-  openEye.classList.add("d-none");
+  viewHideLight.classList.remove("d-none");
+  viewLight.classList.add("d-none");
   loginFormInputElements.password.type = "password";
 }
