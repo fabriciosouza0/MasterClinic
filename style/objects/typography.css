@@ -5,6 +5,7 @@
   --xs-font-size: 13px;
   --bolder-font-weight: 700;
   --bold-font-weight: 600;
+  --fine-font-weight: 500;
 }
 
 .lg-font-size {
@@ -29,4 +30,8 @@
 
 .bold-font-weight {
   font-weight: var(--bold-font-weight);
+}
+
+.fine-font-weight {
+  font-weight: var(--fine-font-weight);
 }
