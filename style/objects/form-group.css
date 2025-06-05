@@ -1,0 +1,35 @@
+@import "../main.css";
+
+.form-group {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  row-gap: 2px;
+
+  & label {
+    font-size: var(--md-font-size);
+    color: var(--color-blue-dark);
+  }
+
+  & input[type="text"],
+  & input[type="password"],
+  & input[type="email"],
+  & input[type="number"],
+  & textarea {
+    background-color: var(--color-white);
+    padding-right: var(--md-padding);
+    padding-top: var(--md-padding);
+    padding-bottom: var(--md-padding);
+    padding-left: var(--md-padding);
+    border-radius: var(--md-border-radius);
+    border: none;
+    font-size: var(--md-font-size);
+    width: 100%;
+    color: var(--color-blue-dark);
+    border: 2px solid var(--color-blue-dark);
+  }
+}
+
+.form-group input:focus {
+  outline: none;
+}

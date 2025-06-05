@@ -1,0 +1,32 @@
+:root {
+  --lg-font-size: 40px;
+  --md-font-size: 15px;
+  --sm-font-size: 14px;
+  --xs-font-size: 13px;
+  --bolder-font-weight: 700;
+  --bold-font-weight: 600;
+}
+
+.lg-font-size {
+  font-size: var(--lg-font-size);
+}
+
+.md-font-size {
+  font-size: var(--md-font-size);
+}
+
+.sm-font-size {
+  font-size: var(--sm-font-size);
+}
+
+.xs-font-size {
+  font-size: var(--xs-font-size);
+}
+
+.bolder-font-weight {
+  font-weight: var(--bolder-font-weight);
+}
+
+.bold-font-weight {
+  font-weight: var(--bold-font-weight);
+}

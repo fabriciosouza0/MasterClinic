@@ -1,0 +1,26 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-blue-dark);
+  color: var(--color-white);
+  font-family: "Secular One", sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+  border-radius: var(--md-border-radius);
+  border: none;
+  cursor: pointer;
+  
+  & img {
+    transition: all 0.2s ease;
+    width: var(--sm-icon-size);
+    height: var(--sm-icon-size);
+  }
+
+}
+
+.button:hover img {
+ transform: translateX(3px);
+}
